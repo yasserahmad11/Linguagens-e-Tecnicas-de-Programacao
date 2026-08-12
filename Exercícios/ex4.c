@@ -18,6 +18,7 @@ int main(){
     float area = pi * raio * raio;
     printf("A área do círculo  de raio %.1f é: %.2f\n", raio, area);
 
+    //Cálculo da área do trapézio
     printf("Agora a área do trapézio!\n");
 
     float baseMaior;
