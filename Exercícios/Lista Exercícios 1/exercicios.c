@@ -3,6 +3,7 @@
 #define pi 3.141592
 
 int main(){
+    //EXERCÍCIO 1
     //Variáveis
     int num1, num2, aux;
 
