@@ -110,21 +110,21 @@ int main(){
 
 
     //EXERCÍCIO 6
-    //Variável
-    int idade, meses, dias;
+    //Variáveis
+    int anos, meses, dias, resto;
 
-    //Usuário informa a idade
-    printf("Digite sua idade: ");
-    scanf("%d", &idade);
+    //Usuário informa a idade em dias 
+    printf("Digite sua idade em dias: ");
+    scanf("%d", &dias);
 
     //Cálculo da idade em meses e dias
-    meses = idade * 12;
-    dias = meses * 30;
-
+    anos = dias / 365;
+    resto = dias % 365;
+    meses = resto / 30;
+    dias = resto % 30;
+    
     //Imprime na tela
-    printf("Sua idade de %d anos é: \n", idade);
-    printf("%d em meses\n", meses);
-    printf("%d em dias\n\n", dias);
+    printf("Sua idade: %d anos, %d meses e %d dias\n\n", anos, meses, dias);
 
 
     //EXERCÍCIO 7
