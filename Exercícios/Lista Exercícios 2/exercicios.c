@@ -1,6 +1,7 @@
 #include <stdio.h>
-#define pi 3.141592
 #include <stdlib.h>
+#define pi 3.141592
+
 int main(){
     //EXERCÍCIO 1
     //Váriaveis
