@@ -153,10 +153,10 @@ int main(){
 
 
     //EXERCÍCIO 10
-    // Variáveis
+    //Variáveis
     int a, b, c, maiorAB, maior;
     
-    // Usuário informa os três valores
+    //Usuário informa os três valores
     printf("Digite um valor: ");
     scanf("%d", &a);
     printf("Digite um valor: ");
@@ -164,13 +164,13 @@ int main(){
     printf("Digite um valor: ");
     scanf("%d", &c);
 
-    // Calcula o maior entre A e B
+    //Calcula o maior entre A e B
     maiorAB = (a + b + abs(a - b)) / 2;
 
-    // Calcula o maior entre o resultado anterior e C
+    //Calcula o maior entre o resultado anterior e C
     maior = (maiorAB + c + abs(maiorAB - c)) / 2;
 
-    // Imprime o maior
+    //Imprime o maior
     printf("%d eh o maior\n", maior);
 
     return 0;
