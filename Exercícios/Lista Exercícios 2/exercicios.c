@@ -154,24 +154,19 @@ int main(){
 
     //EXERCÍCIO 10
     //Variáveis
-    int a, b, c, maiorAB, maior;
-    
-    //Usuário informa os três valores
-    printf("Digite um valor: ");
-    scanf("%d", &a);
-    printf("Digite um valor: ");
-    scanf("%d", &b);
-    printf("Digite um valor: ");
-    scanf("%d", &c);
+    int a, b, c, d, maior, maior_temp1, maior_temp2;
 
-    //Calcula o maior entre A e B
-    maiorAB = (a + b + abs(a - b)) / 2;
+    //Usuários insere os valores
+    printf("Informe os valores a serem comparados: ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
 
-    //Calcula o maior entre o resultado anterior e C
-    maior = (maiorAB + c + abs(maiorAB - c)) / 2;
+    //Cálculos
+    maior_temp1 = (a + b + abs(a-b)) / 2;
+    maior_temp2 = (c + d + abs(c-d)) / 2;
+    maior = (maior_temp1 + maior_temp2 + abs(maior_temp1 - maior_temp2)) / 2;
 
-    //Imprime o maior
-    printf("%d eh o maior\n", maior);
+    //Imprime na tela
+    printf("O maior entre (%d) (%d) (%d) (%d) = %d", a, b, c, d, maior);
 
     return 0;
 }
