@@ -5,5 +5,5 @@
 - **Aulas/**: Contém testes e exemplos realizados durante as aulas.
 
 - **Exercícios/**:
-  - **Aulas/**: Contém exercícios realizados a partir dos PDFs utilizados nas aulas.
+  - **Aulas/**: Contém exercícios realizados a partir dos PDFs e exercícios propostos nas aulas.
   - **Lista Exercícios/**: Contém exercícios realizados a partir dos PDFs das listas de exercícios.
