@@ -177,5 +177,8 @@ int main(){
         break;
         case 10:
             ex10();
+        break;
+        default:
+        printf("Opcao invalida! Escolha um numero de 1 a 10.\n");
     }
 }
