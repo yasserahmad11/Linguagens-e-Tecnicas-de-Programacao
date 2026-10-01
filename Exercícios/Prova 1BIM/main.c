@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 // PROVA ESOFT M A
 void ex00(){
@@ -237,9 +238,9 @@ void ex12(){
 void menuESOFTMB() {
     int op;
     printf("\n===== ESOFT M B =====\n");
-    printf("(0) Exercício 10\n");
-    printf("(1) Exercício 11\n");
-    printf("(2) Exercício 12\n");
+    printf("(0) Exercício 0\n");
+    printf("(1) Exercício 1\n");
+    printf("(2) Exercício 2\n");
     printf("Escolha o exercício: ");
     scanf("%d", &op);
     switch (op) {
@@ -258,6 +259,108 @@ void menuESOFTMB() {
     }
 }
 
+// PROVA ADSIS N A
+void ex20(){
+    int n1, n2, n3, n4, n5;
+    printf("Digite 5 números inteiros: ");
+    scanf("%d %d %d %d %d", &n1, &n2, &n3, &n4, &n5);
+    if (n2 == n1 + 1) {
+        printf("Consecutivos: %d %d\n", n1, n2);
+    }
+
+    if (n3 == n2 + 1) {
+        printf("Consecutivos: %d %d\n", n2, n3);
+    }
+
+    if (n4 == n3 + 1) {
+        printf("Consecutivos: %d %d\n", n3, n4);
+    }
+
+    if (n5 == n4 + 1) {
+        printf("Consecutivos: %d %d\n", n4, n5);
+    }
+}
+void ex21(){
+    float imc, peso, altura;
+    printf("Digite seu peso em quilogramas(kg): ");
+    scanf("%f", &peso);
+    printf("Digite sua altura em metros(m): ");
+    scanf("%f", &altura);
+    imc = peso / pow(altura, 2);
+    if (imc < 18.5){
+        printf("IMC: %f\nClassificação: Abaixo do peso.", imc);
+    }
+    else if (imc >= 18.5 && imc <= 24.9){
+        printf("IMC: %f\nClassificação: Normal.", imc);
+    }
+    else if (imc >= 25.0 && imc <= 29.9){
+        printf("IMC: %f\nClassificação: Acima do peso.", imc);
+    }
+    else{
+        printf("IMC: %f\nClassificação: Obeso.", imc);
+    }
+}
+void ex22(){
+    int A = 6;
+    int B = 0;
+    int C = 0;
+    printf("Inicio:\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+    A = A - 1;
+    C = C + 1;
+    printf("Movimento 1 - Disco 1: A -> C\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+    A = A - 2;
+    B = B + 2;
+    printf("Movimento 2 - Disco 2: A -> B\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+    C = C - 1;
+    B = B + 1;
+    printf("Movimento 3 - Disco 1: C -> B\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+    A = A - 3;
+    C = C + 3;
+    printf("Movimento 4 - Disco 3: A -> C\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+    B = B - 1;
+    A = A + 1;
+    printf("Movimento 5 - Disco 1: B -> A\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+    B = B - 2;
+    C = C + 2;
+    printf("Movimento 6 - Disco 2: B -> C\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+    A = A - 1;
+    C = C + 1;
+    printf("Movimento 7 - Disco 1: A -> C\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+    printf("Resultado final:\n");
+    printf("A = %d | B = %d | C = %d\n", A, B, C);
+}
+// MENU ADSIS N A
+void menuADSISNA() {
+    int op;
+    printf("\n===== ADSIS N A =====\n");
+    printf("(0) Exercício 0\n");
+    printf("(1) Exercício 1\n");
+    printf("(2) Exercício 2\n");
+    printf("Escolha o exercício: ");
+    scanf("%d", &op);
+    switch (op) {
+        case 0:
+            ex20();
+            break;
+        case 1:
+            ex21();
+            break;
+
+        case 2:
+            ex22();
+            break;
+        default:
+            printf("Opção inválida!\n");
+    }
+}
 
 
 int main() {
@@ -266,7 +369,7 @@ int main() {
     printf("========= MENU PRINCIPAL =========\n");
     printf("(1) ESOFT M A\n");
     printf("(2) ESOFT M B\n");
-    printf("(3) ADS A\n");
+    printf("(3) ADSIS N A\n");
     printf("Escolha a prova: ");
     scanf("%d", &prova);
 
@@ -276,6 +379,9 @@ int main() {
             break;
         case 2:
             menuESOFTMB();
+            break;
+        case 3:
+            menuADSISNA();
             break;
         default:
             printf("Opção inválida!\n");
