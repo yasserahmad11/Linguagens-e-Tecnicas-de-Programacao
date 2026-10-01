@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-void ex0(){
+// PROVA ESOFT M A
+void ex00(){
     int n1, n2, n3, n4;
     printf("Digite o primeiro numero: ");
     scanf("%d", &n1);
@@ -31,7 +32,7 @@ void ex0(){
         }
     }
 }
-void ex1(){
+void ex01(){
     int itens, capacidade, mochilas;
     printf("Digite a quantidade de itens: ");
     scanf("%d", &itens);
@@ -45,7 +46,7 @@ void ex1(){
         printf("Número de mochilas totalmente preenchidas: %d\n", mochilas);
     }
 }
-void ex2(){
+void ex02(){
     float valor, resultado;
     int origem, destino;
     printf("\n===== UNIDADES =====\n");
@@ -118,31 +119,167 @@ void ex2(){
         printf("Erro: unidade de conversao invalida.\n");
     }
 }
-
-
-int main(){
+// MENU ESOFT M A
+void menuESOFTMA() {
     int op;
-
-    printf("========= MENU =========\n");
-    printf("(0)\n(1)\n(2)\n");
-    printf("Escolha o exerício da prova: ");
+    printf("\n===== ESOFT M A =====\n");
+    printf("(0) Exercício 0\n");
+    printf("(1) Exercício 1\n");
+    printf("(2) Exercício 2\n");
+    printf("Escolha o exercício: ");
     scanf("%d", &op);
-
-    switch(op){
+    switch (op) {
         case 0:
-            ex0();
+            ex00();
             break;
         case 1:
-            ex1();
+            ex01();
             break;
         case 2:
-            ex2();
+            ex02();
             break;
         default:
-            printf("Opção inválida!");
+            printf("Opção inválida!\n");
+    }
+}
+
+// PROVA ESOFT M B
+void ex10(){
+    int itens, capacidade, mochilas, resto;
+    printf("Digite a quantidade de itens: ");
+    scanf("%d", &itens);
+    printf("Digite a capacidade de cada mochila: ");
+    scanf("%d", &capacidade);
+    mochilas = itens / capacidade;
+    resto = itens % capacidade;
+    printf("Número de mochilas totalmente preenchidas: %d\n", mochilas);
+    printf("Sobram: %d itens.", resto);
+}
+void ex11(){
+    int a, b, c;
+    printf("Digite três números inteiros: ");
+    scanf("%d %d %d", &a, &b, &c);
+    if (a == b || a == c || b == c) {
+        printf("Os números têm que ser distintos!");
+    }
+    else {
+        if (a < b && b < c) {
+            printf("Ordem crescente: %d %d %d", a, b, c);
+        }
+        else if (a < c && c < b) {
+            printf("Ordem crescente: %d %d %d", a, c, b);
+        }
+        else if (b < a && a < c) {
+            printf("Ordem crescente: %d %d %d", b, a, c);
+        }
+        else if (b < c && c < a) {
+            printf("Ordem crescente: %d %d %d", b, c, a);
+        }
+        else if (c < a && a < b) {
+            printf("Ordem crescente: %d %d %d", c, a, b);
+        }
+        else {
+            printf("Ordem crescente: %d %d %d", c, b, a);
+        }
+    }
+}
+void ex12(){
+    float num1, num2;
+    int operador;
+    printf("======= OPERAÇÕES =======\n");
+    printf("(1) Maior que\n");
+    printf("(2) Menor que\n");
+    printf("(3) Igual a\n");
+    printf("(4) Diferente de\n\n");
+    printf("Digite o primeiro valor: ");
+    scanf("%f", &num1);
+    printf("Digite o segundo valor: ");
+    scanf("%f", &num2);
+    printf("Digite o código da operação (1, 2, 3 ou 4): ");
+    scanf("%d", &operador);
+    if (operador == 1) {
+        if (num1 > num2) {
+            printf("Verdadeiro");
+        }
+        else {
+            printf("Falso");
+        }
+    }
+    else if (operador == 2) {
+        if (num1 < num2) {
+            printf("Verdadeiro");
+        }
+        else {
+            printf("Falso");
+        }
+    }
+    else if (operador == 3) {
+        if (num1 == num2) {
+            printf("Verdadeiro");
+        }
+        else {
+            printf("Falso");
+        }
+    }
+    else if (operador == 4) {
+        if (num1 != num2) {
+            printf("Verdadeiro");
+        }
+        else {
+            printf("Falso");
+        }
+    }
+    else {
+        printf("operador invalido");
+    }
+}
+// MENU ESOFT M B
+void menuESOFTMB() {
+    int op;
+    printf("\n===== ESOFT M B =====\n");
+    printf("(0) Exercício 10\n");
+    printf("(1) Exercício 11\n");
+    printf("(2) Exercício 12\n");
+    printf("Escolha o exercício: ");
+    scanf("%d", &op);
+    switch (op) {
+        case 0:
+            ex10();
             break;
+        case 1:
+            ex11();
+            break;
+
+        case 2:
+            ex12();
+            break;
+        default:
+            printf("Opção inválida!\n");
+    }
+}
+
+
+
+int main() {
+    int prova;
+
+    printf("========= MENU PRINCIPAL =========\n");
+    printf("(1) ESOFT M A\n");
+    printf("(2) ESOFT M B\n");
+    printf("(3) ADS A\n");
+    printf("Escolha a prova: ");
+    scanf("%d", &prova);
+
+    switch (prova) {
+        case 1:
+            menuESOFTMA();
+            break;
+        case 2:
+            menuESOFTMB();
+            break;
+        default:
+            printf("Opção inválida!\n");
     }
 
     return 0;
-
 }
