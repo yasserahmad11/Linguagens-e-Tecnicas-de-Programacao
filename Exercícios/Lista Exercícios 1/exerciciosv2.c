@@ -128,38 +128,54 @@ void ex8(){
 
 int main(){
     int op;
-    printf("\n========== MENU ==========\n");
-    printf("Escolha o exercício:\n");
-    printf("(1) (2) (3) (4) (6) (7) (8)\n");
-    printf("Opção: ");
-    scanf("%d", &op);
+   
+    do{
+        printf("\n========== MENU ==========\n");
+        printf("Escolha o exercicio:\n");
+        printf("(1) Exercicio 1\n");
+        printf("(2) Exercicio 2\n");
+        printf("(3) Exercicio 3\n");
+        printf("(4) Exercicio 4\n");
+        printf("(5) Exercicio 5\n");
+        printf("(6) Exercicio 6\n");
+        printf("(7) Exercicio 7\n");
+        printf("(8) Exercicio 8\n");
+        printf("(0) Sair\n");
+        printf("Opcao: ");
+        scanf("%d", &op);
 
-    switch(op){
-        case 1:
-            ex1();
-        break;
-        case 2:
-            ex2();
-        break;
-        case 3:
-            ex3();
-        break;
-        case 4:
-            ex4();
-        break;
-        case 5:
-            ex5();
-        break;
-        case 6:
-            ex6();
-        break;
-        case 7:
-            ex7();
-        break;
-        case 8:
-            ex8();
-        break;
-        default:
-        printf("Opcao invalida! Escolha um numero de 1 a 10.\n");
-    }
+        switch(op){
+            case 1:
+                ex1();
+            break;
+            case 2:
+                ex2();
+            break;
+            case 3:
+                ex3();
+            break;
+            case 4:
+                ex4();
+            break;
+            case 5:
+                ex5();
+            break;
+            case 6:
+                ex6();
+            break;
+            case 7:
+                ex7();
+            break;
+            case 8:
+                ex8();
+            break;
+            case 0:
+                printf("Saindo...");
+                break;
+            default:
+            printf("Opcao invalida! Escolha um numero de 1 a 10.\n");
+        }
+    } while(op != 0);
+
+    return 0;
 }
