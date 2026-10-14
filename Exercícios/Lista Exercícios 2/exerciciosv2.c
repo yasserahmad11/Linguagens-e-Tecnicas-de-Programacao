@@ -188,4 +188,6 @@ int main(){
             printf("Opcao invalida! Escolha um numero de 1 a 10.\n");
         }
     } while (op != 0);
+
+    return 0;
 }
