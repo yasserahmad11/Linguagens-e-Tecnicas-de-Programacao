@@ -5,19 +5,39 @@ com o passo da contagem dado pelo terceiro valor */
 //ex: 1, 8, 2 >> contar de 1 a 8, com passo 2 = 3, 5, 7.
 void ex1(){
     int i, num1, num2, num3;
-    printf("Digite 3 números: ");
+    printf("Digite o valor inicial, final e passo: ");
     scanf("%d %d %d", &num1, &num2, &num3);
-
-    for (i = num1; i <= num2; i += num3){
-        printf("Contagem: %d\n", i);
+    
+    if (num2 < num1){
+        for (i = num1; i >= num2; i -= num3){
+            printf("Contagem: %d\n", i);
+        }
+    }
+    else if (num3 <= 0){
+        printf("O passo da contagem deve ser maior que zero.\n");
+    }
+    else{
+        for (i = num1; i <= num2; i += num3){
+            printf("Contagem: %d\n", i);
+        }
     }
 }
-
 // Exercício 2
 /* Faça um programa que receba um número n e realize a soma dos n primeiros termos da sequência definida como: 
 [S = 1/2; 1/4; 1/8; 1/16; ... N] */
 void ex2(){
+    int n, i;
+    float soma = 0, termo = 0.5;
 
+    printf("Digite a quantidade de termos: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        soma = soma + termo;
+        termo = termo / 2;
+    }
+
+    printf("Soma dos termos: %.4f\n", soma);
 }
 // Exercício 3
 /* Crie um programa que exiba na tela, o triângulo de Pascal */
