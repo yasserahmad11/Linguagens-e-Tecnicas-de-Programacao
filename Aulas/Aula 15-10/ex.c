@@ -16,11 +16,38 @@ void ex1(){
 // Exercício 2
 /* Faça um programa que receba um número n e realize a soma dos n primeiros termos da sequência definida como: 
 [S = 1/2; 1/4; 1/8; 1/16; ... N] */
+void ex2(){
 
+}
 // Exercício 3
 /* Crie um programa que exiba na tela, o triângulo de Pascal */
 
 
 int main(){
-    ex1();
+    int op;
+    while (op != 0){
+        printf("\n===== Exercícios =====\n");
+        printf("(1) Exercício 1\n(2) Exercício 2\n(3) Exercício 3\n(0) Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &op);
+
+        switch (op){
+        case 1:
+            ex1();
+            break;
+        case 2:
+            ex2();
+            break;
+        case 3:
+            // ex3();
+            break;
+        case 0:
+            printf("Saindo...\n");
+            break;
+        default:
+            printf("Opção inválida!\n");
+        }
+    }
+    
+    return 0;
 }
