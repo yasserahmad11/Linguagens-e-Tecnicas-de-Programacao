@@ -94,6 +94,42 @@ void ex4(){
     printf("Maior: %d", maior);
 
 }
+void ex5(){
+    int numeros[5], i, primo, d;
+
+    for (i = 0; i < 5; i++){
+        printf("Digite um número: ");
+        scanf("%d", &numeros[i]);
+    }
+
+    for (i = 0; i < 5; i++){
+        if (numeros[i] % 2 == 0){
+            printf("%d é PAR", numeros[i]);
+        }
+        else{
+            printf("%d é ÍMPAR", numeros[i]);
+        }
+
+        primo = 1;
+        if (numeros[i] < 2){
+            primo = 0;
+        }
+        for (d = 2; d * d <= numeros[i]; d++){
+            if (numeros[i] % d == 0){
+                primo = 0;
+                break;
+            }
+        }
+
+        if (primo){
+            printf(" e é PRIMO\n");
+        }
+        else{
+            printf(" e NÃO é PRIMO\n");
+        }
+    }
+
+}
 
 int main(){
     int op;
@@ -116,7 +152,7 @@ int main(){
             ex4();
             break;
         case 5:
-            //ex5();
+            ex5();
             break;
         case 6:
             //ex6();
