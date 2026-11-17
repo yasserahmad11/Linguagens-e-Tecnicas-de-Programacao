@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 void ex1(){
     int num[10], i, j, aux;
@@ -72,7 +74,25 @@ void ex3(){
 
 }
 void ex4(){
+    int valores[10], maior, maior_temp[8], i;
+
+    for (i = 0; i < 10; i++){
+        printf("Digite um valor: ");
+        scanf("%d", &valores[i]);
+    }
+    for (i = 0; i < 5; i++){
+        maior_temp[i] = (valores[2*i] + valores[(2*i)+1] + abs(valores[2*i] - valores[(2*i)+1])) / 2;
+    }
+    for (i = 0; i < 2; i++){
+        maior_temp[i+5] = (maior_temp[2*i] + maior_temp[(2*i)+1] + abs(maior_temp[2*i] - maior_temp[(2*i)+1])) / 2;
+    }
     
+    maior_temp[7] = (maior_temp[6] + maior_temp[4] + abs(maior_temp[6] - maior_temp[4])) / 2;
+    
+    maior = (maior_temp[7] + maior_temp[5] + abs(maior_temp[7] - maior_temp[5])) / 2;
+
+    printf("Maior: %d", maior);
+
 }
 
 int main(){
@@ -93,7 +113,7 @@ int main(){
             ex3();
             break;
         case 4:
-            //ex4();
+            ex4();
             break;
         case 5:
             //ex5();
