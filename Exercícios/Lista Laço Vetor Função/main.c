@@ -130,6 +130,27 @@ void ex5(){
     }
 
 }
+void ex6(){
+    float x1[10], y1[10], x2[10], y2[10], d;
+    int i;
+
+    for (i = 0; i < 10; i++){
+        printf("Par %d\n", i + 1);
+        printf("Digite x1: ");
+        scanf("%f", &x1[i]);
+        printf("Digite y1: ");
+        scanf("%f", &y1[i]);
+        printf("Digite x2: ");
+        scanf("%f", &x2[i]);
+        printf("Digite y2: ");
+        scanf("%f", &y2[i]);
+    }
+
+    for (i = 0; i < 10; i++){
+        d = sqrt((x2[i] - x1[i]) * (x2[i] - x1[i]) + (y2[i] - y1[i]) * (y2[i] - y1[i]));
+        printf("Distancia do par %d: %.2f\n", i + 1, d);
+    }
+}
 
 int main(){
     int op;
@@ -155,7 +176,7 @@ int main(){
             ex5();
             break;
         case 6:
-            //ex6();
+            ex6();
             break;
         case 7:
             //ex7();
