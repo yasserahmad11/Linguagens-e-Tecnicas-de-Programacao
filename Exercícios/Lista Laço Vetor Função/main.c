@@ -151,6 +151,19 @@ void ex6(){
         printf("Distancia do par %d: %.2f\n", i + 1, d);
     }
 }
+void ex7(){
+    int numeros[100], i;
+
+    for (i = 0; i < 100; i++){
+        printf("Digite um número inteiro: ");
+        scanf("%d", &numeros[i]);
+    }
+    for (i = 0; i < 99; i++){
+        if (numeros[i+1] == numeros[i] + 1){
+            printf("%d e %d sao consecutivos\n", numeros[i], numeros[i+1]);
+        }
+    }
+}
 
 int main(){
     int op;
@@ -179,7 +192,7 @@ int main(){
             ex6();
             break;
         case 7:
-            //ex7();
+            ex7();
             break;
         default:
             printf("Opção inválida!\n");
