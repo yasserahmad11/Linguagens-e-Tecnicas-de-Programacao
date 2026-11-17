@@ -95,14 +95,14 @@ void ex4(){
 
 }
 void ex5(){
-    int numeros[5], i, primo, d;
+    int numeros[100], i, primo, d;
 
-    for (i = 0; i < 5; i++){
+    for (i = 0; i < 100; i++){
         printf("Digite um número: ");
         scanf("%d", &numeros[i]);
     }
 
-    for (i = 0; i < 5; i++){
+    for (i = 0; i < 100; i++){
         if (numeros[i] % 2 == 0){
             printf("%d é PAR", numeros[i]);
         }
